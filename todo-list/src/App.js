@@ -47,7 +47,7 @@ class App extends Component {
     const {todos} = this.state;
 
     // 파라미터로 받은 id를 가지고 몇번째 아이템인지 찾는다.
-    const index = toods.findIndex(todo => todo.id === id);
+    const index = todos.findIndex(todo => todo.id === id);
     const selector = todos[index];  // 선택한 객체
 
     const nextTodos = [...todos];   // 배열을 복사
@@ -62,6 +62,13 @@ class App extends Component {
       todos: nextTodos
     });
   }
+  
+  handleRemove = (id) => {
+    const {todos} = this.state;
+    this.setState({
+      todos: todos.filter(todo => todo.id !== id)
+    });
+  }
 
   render() {  // 랜더는 컴포넌트를 만들 때 호출된다.
     const {input, todos} = this.state;
@@ -69,7 +76,8 @@ class App extends Component {
       handleChange,
       handleCreate,
       handleKeyPress,
-      handleToggle
+      handleToggle,
+      handleRemove
     } = this; // 비구조화 할당.
               // this.handleChange,this.handleCreate...등 this를 붙이는 대신
               // 마지막에 this를 할당.
@@ -83,7 +91,7 @@ class App extends Component {
           onCreate={handleCreate}
         />
       )}>
-        <TodoItemList todos={todos} onToggle={handleToggle}/>
+        <TodoItemList todos={todos} onToggle={handleToggle} onRemove = {handleRemove}/>
       </TodoListTemplate>
     );
   }
