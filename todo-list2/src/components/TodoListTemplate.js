@@ -4,7 +4,9 @@ import './TodoListTemplate.css';
 const TodoListTemplate = ({form,list}) => {
     return (
         <main className="Main">
-            <div className="title">TO-DO LIST</div>
+            <div className="title">
+                TO-DO LIST
+            </div>
             <section className="input-main">
                 {form}
             </section>
@@ -12,7 +14,7 @@ const TodoListTemplate = ({form,list}) => {
                 {list}
             </section>
         </main>
-    );
-};
+    )
+}
 
 export default TodoListTemplate;
