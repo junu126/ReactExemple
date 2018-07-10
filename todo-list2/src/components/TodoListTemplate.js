@@ -14,7 +14,7 @@ const TodoListTemplate = ({form,list}) => {
                 {list}
             </section>
         </main>
-    )
-}
+    );
+};
 
 export default TodoListTemplate;
