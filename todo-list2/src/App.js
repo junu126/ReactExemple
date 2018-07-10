@@ -11,7 +11,7 @@ class App extends Component {
     {
       input : "",
       todos : [
-        {id :0, text :`안녕하세요.`, check : false},
+        {id : 0, text :`안녕하세요.`, check : false},
         {id : 1, text : `Hello.`, check : true},
         {id : 2, text : `Hi`, check : false}
       ]
@@ -98,7 +98,7 @@ class App extends Component {
   render() {
 
     const {input, todos} = this.state;
-    const {change, create, press, onToggle, onRemove} = this
+    const {change, create, press, onToggle, onRemove} = this;
 
     return(
       <TodoListTemplate form={(
@@ -108,12 +108,14 @@ class App extends Component {
           onCreate={create} // 함수
           onKeyPress={press} // 함수
           />
-        )}>
-        <Todoitemlist 
-          todos={todos} // state
-          onToggle={onToggle} // 함수
-          onRemove={onRemove} // 함수
+        )}
+       list = {(
+         <Todoitemlist 
+            todos={todos} // state
+            onToggle={onToggle} // 함수
+            onRemove={onRemove} // 함수
         />
+      )}>
       </TodoListTemplate>
     ); // todos에 text, id, check값을 state의 todos로 보냄.
   }
