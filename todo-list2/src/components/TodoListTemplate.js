@@ -7,6 +7,7 @@ const TodoListTemplate = ({form,list}) => {
             <div className="title">
                 TO-DO LIST
             </div>
+            <span className="minititle">SEIZE THE DAY!</span>
             <section className="input-main">
                 {form}
             </section>
