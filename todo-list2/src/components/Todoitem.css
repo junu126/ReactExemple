@@ -1,0 +1,30 @@
+.todolist {
+    width: 100%;
+    font-size: 20pt;
+    color: white;
+    margin: 10px 0;
+}
+
+.todolsit-true, .todolsit-false{
+    display: inline;
+}
+
+.todolist-true {
+    text-decoration: black line-through;
+    color: rgb(255, 255, 255);
+}
+.remove{
+    margin: 0 10px;
+    display: inline;
+    color: rgb(190, 51, 51);
+    text-decoration: none;
+    -webkit-touch-callout: none;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+
+.remove:hover {
+    color: red;
+}
