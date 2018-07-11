@@ -1,0 +1,31 @@
+.form {
+    width: 60%;
+}
+
+.create-input {
+    width: 200px;
+    height: 100%;
+    width: 80%;
+    font-size: 20pt;
+    text-decoration: none;
+    -webkit-touch-callout: none;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+
+.create-button {
+    height: 51px;
+    width: 19%;
+    position: relative;
+    bottom: 10%;
+    color: white;
+    background: rgb(217, 164, 31);
+    text-decoration: none;
+    -webkit-touch-callout: none;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
