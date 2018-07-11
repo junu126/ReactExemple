@@ -4,7 +4,7 @@ import './Form.css';
 const Form = ({value, onChange, onCreate, onKeyPress}) => {
     return(
         <div className="form">
-            <input value={value} onChange={onChange} onKeyPress={onKeyPress}/>
+            <input className="create-input" value={value} onChange={onChange} onKeyPress={onKeyPress}/>
             <button className="create-button" onClick={onCreate}>
                 Add
             </button>
