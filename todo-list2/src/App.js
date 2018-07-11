@@ -11,9 +11,7 @@ class App extends Component {
     {
       input : "",
       todos : [
-        {id : 0, text :`안녕하세요.`, check : false},
-        {id : 1, text : `Hello.`, check : true},
-        {id : 2, text : `Hi`, check : false}
+        {id : 0, text :`Write the Todo-List!`, check : false}
       ]
     };
 
@@ -91,7 +89,7 @@ class App extends Component {
     const {todos} = this.state;
 
     this.setState({
-      todos : todos.filter(this.todos = () => todos.id !== id)
+      todos : todos.filter(todos => todos.id !== id)
     });
   }
 
