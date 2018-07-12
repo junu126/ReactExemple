@@ -113,8 +113,7 @@ class App extends Component {
             onToggle={onToggle} // 함수
             onRemove={onRemove} // 함수
         />
-      )}>
-      </TodoListTemplate>
+      )}/>
     ); // todos에 text, id, check값을 state의 todos로 보냄.
   }
 }
