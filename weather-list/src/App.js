@@ -1,29 +1,42 @@
 import React, { Component } from 'react';
-import weathertemplate from './component/weathertemplate';
-import weathertitle from './component/weathertitle';
-import weatherupdown from './component/weatherupdown';
-import weatherlist from './component/weatherlist';
+import moment from 'moment';
+//import axios from 'axios';
+import Weathertemplate from './component/weathertemplate';
+import Weathertitle from './component/weathertitle';
+import Weatherupdown from './component/weatherupdown';
+import Weatherlist from './component/weatherlist';
 
 class App extends Component {
 
+  id = 0;
 
+  state = {
+    date : [
+      moment().format(`YYYY년 MM월 DD일`)
+    ]
+  }
 
   render() {
+
+    const {date} = this.state;
+
     return (
-        <weathertemplate  title = {(
-          <weathertitle
-            
+        <Weathertemplate
+        
+        title = {(
+          <Weathertitle
+            bd={date}
           />
         )}
 
         list = {(
-          <weatherlist
-          
+          <Weatherlist
+            
           />
         )}
 
         updown = {(
-          <weatherupdown
+          <Weatherupdown
           
           />
         )}
