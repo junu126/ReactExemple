@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Form from "./components/Form";
 import TodoListTemplate from './components/TodoListTemplate';
 import Todoitemlist from './components/Todoitemlist';
+import moment from 'moment';
 
 class App extends Component {
 
@@ -23,7 +24,7 @@ class App extends Component {
   
   // add버튼을 누르면 추가될 내용이 만들어 져야함.
   create = () => {
-
+    console.log(`${moment()}`)
     const {input, todos} = this.state
     if(input === ''){
       this.setState({
@@ -52,6 +53,7 @@ class App extends Component {
   // 클릭했을때 check값을 반대로.
   onToggle = (id) => {
 
+    console.log(`${moment()}`)
     const {todos} = this.state
     // 분할 적용법.
     const index = todos.findIndex(todo => todo.id === id);
@@ -87,7 +89,7 @@ class App extends Component {
   onRemove = (id) => {
 
     const {todos} = this.state;
-
+    console.log(`${moment()}`)
     this.setState({
       todos : todos.filter(todos => todos.id !== id)
     });
