@@ -1,7 +1,7 @@
 import React from 'react';
 import './weatherlist.css';
 
-const weatherlist = ({}) => {
+const Weatherlist = ({}) => {
     return(
         <div>
             
@@ -9,4 +9,4 @@ const weatherlist = ({}) => {
     );
 }
 
-export default weatherlist;
+export default Weatherlist;
