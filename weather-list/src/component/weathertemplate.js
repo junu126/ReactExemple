@@ -1,7 +1,7 @@
 import React from 'react';
 import './weathertemplate.css';
 
-const weathertemplate = ({title, list, updown}) => {
+const Weathertemplate = ({title, list, updown}) => {
     return(
         <main className="main">
             <section className="title">
@@ -17,4 +17,4 @@ const weathertemplate = ({title, list, updown}) => {
     );
 };
 
-export default weathertemplate;
+export default Weathertemplate;
