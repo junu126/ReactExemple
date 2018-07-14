@@ -1,7 +1,7 @@
 import React from 'react';
 import './weatherupdown.css';
 
-const weatherupdown = ({}) => {
+const Weatherupdown = ({}) => {
     return(
         <div>
 
@@ -9,4 +9,4 @@ const weatherupdown = ({}) => {
     );
 }
 
-export default weatherupdown;
+export default Weatherupdown;
