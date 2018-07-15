@@ -1,0 +1,7 @@
+@import url(//cdn.jsdelivr.net/font-nanum/1.0/nanumgothic/nanumgothic.css);
+.btn {
+    font-family: 'nanumgothic';
+    
+    text-align: center;
+    display: inline-block;
+}
