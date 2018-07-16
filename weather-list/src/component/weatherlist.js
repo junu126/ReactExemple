@@ -5,14 +5,14 @@ const Weatherlist = ({wdir, wspd, rain, sky, sky_img, humidity,  temc, temmax, t
     return(
         <div>
             <div className="list-humidity_temperature">
-                <span>{humidity}</span>
-                <span>{temc}</span>
-                <span>{temmax}</span>
-                <span>{temmin}</span>
+                <span className="humidity">{humidity}</span>
+                <span className="humidity">{temc}</span>
+                <span className="humidity">{temmax}</span>
+                <span className="humidity">{temmin}</span>
             </div>
             <div className="list-sky">
-                <img src={sky_img}></img>
-                <span>{sky}</span>
+                <img className="sky_img" src={sky_img}></img>
+                <span className="humidity">{sky}</span>
             </div>
             <div className="list-wind_rain">
                 <span>{wdir}</span>
