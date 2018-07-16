@@ -1,7 +1,30 @@
-@import url(//cdn.jsdelivr.net/font-nanum/1.0/nanumgothic/nanumgothic.css);
-.btn {
-    font-family: 'nanumgothic';
-    
-    text-align: center;
+.date {
+    font-family: monospace;
     display: inline-block;
+    font-size: 38pt;
+    border-right: solid 3px gray;
+    padding-right: 15px;
+    margin: 4px;
+    color: black;
+}
+
+.plate-title {
+    float: right;
+    position: relative;
+    
+}
+
+.mini-text {
+    top: 535px;
+    position: absolute;
+    font-size: 15px;
+    right: 0;
+}
+
+.text {
+    font-family: monospace;
+    display: inline-block;
+    font-size: 38pt;
+    margin-left: 15px;
+    margin-right: 15px;
 }
