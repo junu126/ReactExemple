@@ -1,0 +1,49 @@
+.list-humidity_temperature {
+    outline: none;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid black;
+    margin: 40px 60px;
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    display: inline-block;
+}
+
+.list-sky {
+    outline: none;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid black;
+    margin: 40px 60px;
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    left: 330px;    
+    display: inline-block;
+}
+
+.list-wind_rain {
+    outline: none;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid black;
+    margin: 40px 60px;
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    left: 660px;    
+    display: inline-block;
+}
+
+.humidity {
+    display: block;
+    margin: 55px 20px;
+    font-size: 17pt;
+}
+
+.sky_img {
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
