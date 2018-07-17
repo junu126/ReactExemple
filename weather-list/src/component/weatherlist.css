@@ -42,8 +42,19 @@
     font-size: 17pt;
 }
 
+.humidity-sky {
+    position: static;
+    text-align: center; 
+    margin: 55px 20px;
+    font-size: 17pt;
+    bottom: 0;
+
+}
+
 .sky_img {
     width: 100%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
