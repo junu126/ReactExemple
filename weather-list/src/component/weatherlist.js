@@ -12,12 +12,12 @@ const Weatherlist = ({wdir, wspd, rain, sky, sky_img, humidity,  temc, temmax, t
             </div>
             <div className="list-sky">
                 <img className="sky_img" src={sky_img}></img>
-                <span className="humidity">{sky}</span>
+                <span className="humidity-sky">{sky}</span>
             </div>
             <div className="list-wind_rain">
-                <span>{wdir}</span>
-                <span>{wspd}</span>
-                <span>{rain}</span>
+                <span className="humidity">{wdir}</span>
+                <span className="humidity">{wspd}</span>
+                <span className="humidity">{rain}</span>
             </div>
         </div>
     );
