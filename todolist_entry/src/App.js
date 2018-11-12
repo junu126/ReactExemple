@@ -10,14 +10,23 @@ class App extends Component {
       'JS 공부하기',
       'HTML 공부하기',
       'CSS 공부하기',
-    ]
+    ],
+    toggle : 'TodoItem'
   }
 
   isHandleInput = (e) => {
-    let target = e.target.value;
-
-    this.setState({value : target});
+    this.setState({value : e.target.value});
   };
+
+  isOnHandleToggle = () => {
+    
+  };
+
+  isDelete = (id) => {
+    const { TodoItems } = this.state;
+
+    this.setState({TodoItems : TodoItems.filter((item, index) => index !== id)})
+  }
 
   AddTodoList = () => {
     const { value, TodoItems } = this.state;
@@ -54,6 +63,7 @@ class App extends Component {
           />
           <TodoList 
             ItemList = {TodoItems}
+            isDelete = {this.isDelete}
           />
         </div>
       </div>
