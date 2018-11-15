@@ -9,17 +9,33 @@
   overflow-x:hidden;
 }
 
-.TodoItem {
+.TodoItem_off {
   font-size: 20px;
   margin: 10px;
   cursor: pointer;
 }
 
-.TodoItem .DeleteButton {
+.TodoItem_on {
+  font-size: 20px;
+  margin: 10px;
+  cursor: pointer;
+  text-decoration: black line-through;
+}
+
+.TodoItem_on .DeleteButton {
   float : right;
 }
 
-.TodoItem .DeleteButton:hover {
+.TodoItem_on .DeleteButton:hover {
+  border-radius: 60px;
+  background: #285943; 
+}
+
+.TodoItem_off .DeleteButton {
+  float : right;
+}
+
+.TodoItem_off .DeleteButton:hover {
   border-radius: 60px;
   background: #285943; 
 }
