@@ -1,0 +1,41 @@
+.TodoLists {
+  width: 100%;
+  height: 65%;
+  background-color: #8CD790;
+  border-top : 1px solid black;
+  border-bottom : 1px solid black;
+  margin-top: -2px;
+  overflow:scroll;
+  overflow-x:hidden;
+}
+
+.TodoItem_off {
+  font-size: 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.TodoItem_on {
+  font-size: 20px;
+  margin: 10px;
+  cursor: pointer;
+  text-decoration: black line-through;
+}
+
+.TodoItem_on .DeleteButton {
+  float : right;
+}
+
+.TodoItem_on .DeleteButton:hover {
+  border-radius: 60px;
+  background: #285943; 
+}
+
+.TodoItem_off .DeleteButton {
+  float : right;
+}
+
+.TodoItem_off .DeleteButton:hover {
+  border-radius: 60px;
+  background: #285943; 
+}
