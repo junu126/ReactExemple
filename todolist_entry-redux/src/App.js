@@ -78,7 +78,6 @@ class App extends Component {
 
   render() {
     const { TodoItems } = this.state;
-
     return (
       <div className="App">
         <div className='container'>
