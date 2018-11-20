@@ -5,24 +5,36 @@ import { deleteTodoList, onHandleToggle } from '../core/redux/action/action';
 
 class AddTodos extends Component {
 
-  isDelete = id => {
+  deleteTodoList = id => {
     this.props.deleteTodoList(id);
   }
 
-  isOnHandleToggle = id => {
+  OnHandleToggle = id => {
     this.props.onHandleToggle(id);
   }
   
   render() { 
-    const { TodoItmes } = this.props;
+    const { TodoItems } = this.props;
     return ( 
       <TodoList
-        TodoItmes = {TodoItmes}
-        isDelete = {this.isDelete}
-        isOnHandleToggle = {this.isOnHandleToggle}
+        ItemList = {TodoItems}
+        isDelete = {this.deleteTodoList}
+        isOnHandleToggle = {this.OnHandleToggle}
       />
      );
   }
 }
- 
-export default AddTodos;
+
+let mapStateToProps = state => ({
+  TodoItems : state.TodoItems
+});
+
+let mapDispatchToProps = dispatch => ({
+  deleteTodoList : id => dispatch(deleteTodoList(id)),
+  onHandleToggle : id => dispatch(onHandleToggle(id))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AddTodos);
