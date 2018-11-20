@@ -1,7 +1,13 @@
-import { ADD_TODOLIST, DELETE_TODOLIST, ON_HANDLE_TOGGLE } from './types';
+import { IS_HANDLE_INPUT, ADD_TODOLIST, DELETE_TODOLIST, ON_HANDLE_TOGGLE } from './types';
 
-const addTodoList = () => ({ 
-  type : ADD_TODOLIST
+const isHandleInput = ( value ) => ({
+  type : IS_HANDLE_INPUT,
+  value : value
+});
+
+const addTodoList = ( text ) => ({ 
+  type : ADD_TODOLIST,
+  text : text
 });
 
 const deleteTodoList = ( id ) => ({ 
@@ -14,7 +20,8 @@ const onHandleToggle = ( id ) => ({
   id 
 });
 
-export default {
+export {
+  isHandleInput,
   addTodoList,
   deleteTodoList,
   onHandleToggle

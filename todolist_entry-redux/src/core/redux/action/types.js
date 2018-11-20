@@ -1,3 +1,6 @@
+// 입력 값 저장
+export const IS_HANDLE_INPUT = 'IS_HANDLE_INPUT';
+
 // 리스트 추가
 export const ADD_TODOLIST = 'ADD_TODOLIST';
 
