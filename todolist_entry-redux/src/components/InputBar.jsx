@@ -1,12 +1,12 @@
 import React from 'react';
 import './InputBar.css';
 
-const InputBar = ({isEnter, isHandleInput}) => {
+const InputBar = ({addTodoList, isHandleInput}) => {
   return ( 
     <div className='InputBox'>
       <input 
         className='ListInput' 
-        onKeyPress={isEnter} 
+        onKeyPress={addTodoList} 
         onChange={isHandleInput} 
         placeholder='오늘의 할일은?' 
         type="text"
