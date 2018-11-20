@@ -1,4 +1,4 @@
-import { ADD_TODOLIST, DELETE_TODOLIST, ON_HANDLE_TOGGLE } from '../action/types'
+import { IS_HANDLE_INPUT, ADD_TODOLIST, DELETE_TODOLIST, ON_HANDLE_TOGGLE } from '../action/types'
 
 // 초기 상태 지정
 const initialState = {
@@ -13,18 +13,41 @@ const initialState = {
 // 리듀서 작성
 const todos = (state = initialState, action) => {
   switch (action.type) {
+    case IS_HANDLE_INPUT:
+      return {
+        ...state,
+        value : action.value,
+      };
     case ADD_TODOLIST:
-      return (
-        state.push({text : action.text, check : false})
-      );
+      // const newTodo = state.TodoItems.concat({
+      //   text : action.text,
+      //   check : false
+      // })
+      
+      // const returnTodo = () => {
+      //   if (state.value !== '')
+      //     return newTodo
+      //   else
+      //     return [...state]
+      // }
+      return {
+        ...state,
+        TodoItems : state.value === '' ? state.TodoItems : 
+        state.TodoItems.concat({
+          text : action.text,
+          check : false
+        }),
+        value : ''
+      };
     case DELETE_TODOLIST:
-      return (
-        state.filter((items, index) => index !== action.id )
-      );
+      return {
+        TodoItems : state.TodoItems.filter((items, index) => index !== action.id )
+      };
     case ON_HANDLE_TOGGLE:
-      return (
-        state.map((items, index) => index === action.id ? { ...items, check : !items.check } : items)
-      );
+      return {
+        ...state,
+        TodoItems : state.TodoItems.map((items, index) => index === action.id ? { ...items, check : !items.check } : items)
+      };
     default:
       return state;
   }
