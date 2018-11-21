@@ -19,20 +19,9 @@ const todos = (state = initialState, action) => {
         value : action.value,
       };
     case ADD_TODOLIST:
-      // const newTodo = state.TodoItems.concat({
-      //   text : action.text,
-      //   check : false
-      // })
-      
-      // const returnTodo = () => {
-      //   if (state.value !== '')
-      //     return newTodo
-      //   else
-      //     return [...state]
-      // }
       return {
         ...state,
-        TodoItems : state.value === '' ? state.TodoItems : 
+        TodoItems : state.value.trim() === '' ? state.TodoItems : 
         state.TodoItems.concat({
           text : action.text,
           check : false
