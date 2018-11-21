@@ -6,8 +6,10 @@ import { connect } from 'react-redux';
 class InputTodo extends Component {
 
   addTodoList = (e) => {
-    this.props.addTodoList(e.target.value);
-    e.target.value = null;
+    if (e.key === 'Enter') {
+      this.props.addTodoList(e.target.value);
+      e.target.value = null;
+    }
   }
 
   isHandleInput = (e) => {
