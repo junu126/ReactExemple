@@ -5,6 +5,12 @@
 /.pnp
 .pnp.js
 
+# scripts
+/scripts/*
+
+/config/*
+
+
 # testing
 /coverage
 
@@ -21,3 +27,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+*.lock
+package.json*
+gitignore*
