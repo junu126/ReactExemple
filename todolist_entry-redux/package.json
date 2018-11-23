@@ -8,8 +8,7 @@
     "react-redux": "^5.1.1",
     "react-scripts": "2.1.1",
     "redux": "^4.0.1",
-    "redux-devtools-extension": "^2.13.5",
-    "webpack-cli": "^3.1.2"
+    "redux-devtools-extension": "^2.13.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -25,8 +24,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "devDependencies": {
-    "webpack": "^4.26.0"
-  }
+  ]
 }
