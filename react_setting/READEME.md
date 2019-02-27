@@ -8,10 +8,10 @@ Creat-React-App을 사용하지 않고 직접 webpack과 babel을 만져 React�
 
 ```npm
 // 웹펙 추가
-npm i --save-dev -g webpack webpack-cli
+npm i --save-dev webpack webpack-cli
 
 // 바벨 추가
-npm i --save-dev -g @babel/core babel-loader @babel/preset-env
+npm i --save-dev @babel/core babel-loader @babel/preset-env
 
 // 리엑트 추가
 npm i --save-dev react react-dom @babel/preset-react
@@ -31,6 +31,8 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
+  entry: __dirname + '/src/index.js',
+  output: { path: __dirname + '/dist', filename: 'bundle.js' },
   module: {
     rules: [
       {
@@ -58,6 +60,9 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    extensions: ['*', '.js', '.jsx']
+  },
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/index.html",
@@ -84,9 +89,9 @@ module.exports = {
 
 4. root폴더에 src폴더 생성
 
-5. src에 App.js & App.css & index.html & index.js 생성
+5. src에 App.jsx & App.css & index.html & index.js 생성
 ```js
-// App.js
+// App.jsx
 
 import React from 'react';
 
@@ -125,7 +130,9 @@ body {
 ```
 
 ```js
+import React from 'react';
 import ReactDOM from 'react-dom';
+
 import App from './App';
 
 ReactDOM.render(<App />, document.getElementById("root"));
@@ -145,7 +152,7 @@ npm i --save-dev webpack-dev-server
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open"
+    "start": "webpack-dev-server --hot --inline --mode development --open"
   },
   // ...
 }
