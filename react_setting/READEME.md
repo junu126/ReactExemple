@@ -8,19 +8,19 @@ Creat-React-App을 사용하지 않고 직접 webpack과 babel을 만져 React�
 
 ```npm
 // 웹펙 추가
-npm i --save-dev webpack webpack-cli
+npm i webpack webpack-cli
 
 // 바벨 추가
-npm i --save-dev @babel/core babel-loader @babel/preset-env
+npm i @babel/core babel-loader @babel/preset-env @babel/polyfill
 
 // 리엑트 추가
-npm i --save-dev react react-dom @babel/preset-react
+npm i react react-dom @babel/preset-react
 
 // HTML 로더 추가
-npm i --save-dev html-webpack-plugin html-loader
+npm i html-webpack-plugin html-loader
 
 // CSS 로더 추가
-npm i --save-dev mini-css-extract-plugin css-loader
+npm i mini-css-extract-plugin css-loader
 ```
 
 3. webpack.config.js & .babelrc 파일 생성.
@@ -31,7 +31,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: __dirname + '/src/index.js',
+  entry: ['@babel/polyfill', __dirname + '/src/index.js'],
   output: { path: __dirname + '/dist', filename: 'bundle.js' },
   module: {
     rules: [
